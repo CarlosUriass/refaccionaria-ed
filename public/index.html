@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="/public/img/truper.png" class="h-8" alt="Truper logo">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+        </a>
+        
+        <!-- Elemento del carrito de compras a la derecha -->
+        <button id="boton-carrito" class="relative flex items-center">
+            <img src="/public/img/carrito-de-compras.png" class="h-8" alt="Carrito de compras">
+            <span id="cantidad-carrito" class="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-medium text-white bg-red-600 rounded-full">0</span>
+        </button>
+        
+        <!-- Recuadro del carrito -->
+        <div id="recuadro-carrito" class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-200 shadow-lg p-4 z-30">
+            <!-- Aquí se agregarán los productos -->
+
+
+            <button id="btn-procesar-venta" class="py-2.5 px-5 mt-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 mx-auto block">
+                Procesar Venta
+            </button>
+        </div>
+
+    </div>
+
+
+</nav>
+
+
+
+
+      <!-- Productos -->
+
+      <div class="pt-20" id="contenedor-productos"> 
+        <div class="grid grid-cols-4 gap-4">
+
+           
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/Martillo-truper.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Martillo Truper</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 20101606</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Martillo de alta calidad, ideal para trabajos de construcción. Cuenta con un mango ergonómico que garantiza un mejor control y comodidad durante su uso.
+        </p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$1449.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<!-- Producto 2 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/Pala-mango-corto.webp" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Pala mango corto</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 20101687</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Una pala resistente con mango corto ideal para trabajos pesados en el jardín o la construcción.</p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$199.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<!-- Producto 3 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/pala-cajuelera-cuadrada-pu-o-d-mango-de-madera-truper-bf0.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Pala cajuelera cuadrada</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 2010245</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Perfecta para trabajos de carga y excavación con su diseño cuadrado y robusto mango de madera.</p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$199.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+
+           <!-- Producto 1 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/destornillador-de-impacto-truper-1-4-pulgadas-bateria-ion-litio-20v-dimi-20a-101606-1.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Destornillador de impacto TRUPER 1/4”</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 20101608</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Destornillador de impacto con batería de ion-litio 20V, ideal para trabajos pesados con alta precisión.</p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$1449.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<!-- Producto 2 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/14138.webp" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Juego de desarmadores</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 11114138</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Set de desarmadores de precisión para diversas tareas mecánicas y electrónicas, con punta magnética.</p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$199.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/juego-10-llaves-allen-mm-punta-hexagonal-con-organizador-10d.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Juego 10 llaves allen mm</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 1012345</span>
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Conjunto de 10 llaves Allen con organizador, fabricadas en acero para máxima durabilidad y precisión.</p>
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$199.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Producto -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/61iR+BiQp2L.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Bomba de aire mini, base de pedal abatible</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 99912345</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Bomba de aire compacta y ligera, ideal para inflar bicicletas y otros artículos de deportes. Su base de pedal abatible proporciona estabilidad durante el uso.</p> <!-- Descripción del producto -->
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$149.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+           <!-- Producto -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/61+3jHy0v2L.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Truper ROTO-1/2A8, Rotomartillo 1/2" 750 W profesional</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 00188750</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Rotomartillo de alto rendimiento, ideal para trabajos de perforación en materiales duros. Cuenta con un motor de 750 W y un diseño ergonómico para mayor comodidad en su uso.</p> <!-- Descripción del producto -->
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$2299.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Producto -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/juego-de-11-llaves-combinadas-std-granalladas-truper-ceb.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Juego de 11 llaves combinadas std granalladas, Truper</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 55100811</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Juego de 11 llaves combinadas granalladas de acero al carbono, ideales para trabajos de mecánica y mantenimiento. Ofrecen un excelente agarre y durabilidad.</p> <!-- Descripción del producto -->
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$599.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Producto 1 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/serrucho-para-madera-mango-comfort-rapid-truper-18-pulgadas-str-18-101868-1.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Serrucho Rapid 18'' Mango Comfort Grip Truper</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 23122318</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Serrucho de 18 pulgadas con mango Comfort Grip, ideal para trabajos de corte en madera. Su diseño ergonómico ofrece mayor comodidad y control.</p> <!-- Descripción del producto -->
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$430.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<!-- Producto 2 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-4">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/Machete-Estandar-18_-Naranja-Truper-15885.jpg.webp" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Machete Estándar 18' Naranja Truper</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 23091218</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Machete de 18 pulgadas con mango de color naranja, perfecto para trabajos de jardinería y uso general. Su hoja afilada garantiza cortes efectivos.</p> <!-- Descripción del producto -->
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$380.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+
+            
+
+          <!-- Producto -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/61aAtY+qCDL-2.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Pulidora 7 1200 W Truper 16626</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 1662623</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Pulidora de 7 pulgadas con motor de 1200 W, ideal para acabados y pulidos de superficies. Su diseño compacto y ligero permite un manejo fácil y cómodo.</p> <!-- Descripción del producto -->
+        
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$599</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/D_NQ_NP_830599-MLU72646901570_112023-O.webp" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Esmeriladora Ind. 9 2300 W Truper 16590 Color Gris</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 16590</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Esmeriladora industrial de 9 pulgadas con un potente motor de 2300 W, diseñada para trabajos de alta demanda. Ideal para metalurgia y uso prolongado.</p> <!-- Descripción del producto -->
+        
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$2790.90</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+<!-- Producto 2 -->
+<div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-4 rounded-t-lg" src="./img/products/Martillo-truper.jpg" alt="product image" />
+    </a>
+    <div class="px-4 pb-4">
+        <a href="#">
+            <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Motosierra 45 cc a gasolina con barra de 20</h5>
+        </a>
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Código: 9991245</span> <!-- Código del producto -->
+        <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Motosierra de gasolina de 45 cc, equipada con una barra de 20 pulgadas, ideal para cortar madera y trabajos de jardinería. Ligera y fácil de manejar.</p> <!-- Descripción del producto -->
+        
+        <div class="flex items-center mt-1.5 mb-3">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+        </div>
+        
+        <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-gray-900 dark:text-white precio">$599</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+        </div>
+    </div>
+</div>
+
+            <!-- Producto -->
+            <div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="p-4 rounded-t-lg" src="./img/products/Martillo-truper.jpg" alt="product image" />
+                </a>
+                <div class="px-4 pb-4">
+                    <a href="#">
+                        <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+                    </a>
+                    <div class="flex items-center mt-1.5 mb-3">
+                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                            <svg class="w-3 h-3 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">5.0</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-gray-900 dark:text-white precio">$599</span>
+                        <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 agregar-carrito">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="flex items-center justify-center space-x-4 mb-4">
+        <select id="Ordenamiento"
+            class="py-1 px-2 w-64 bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:border-transparent dark:text-neutral-400 dark:focus:ring-neutral-600"
+        >
+            <option selected>Ordenar por</option>
+            <option value="codigo">Clave del producto</option>
+            <option value="nombre">Nombre del producto</option>
+            <option value="descripcion">Descripción</option>
+            <option value="cantidad">Cantidad</option>
+            <option value="precio">Precio</option>
+        </select>
+    
+        <form class="w-64">
+            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar por nombre" required />
+            
+            </div>
+        </form>
+    </div>
+    
+    <div class="relative max-h-80 overflow-auto shadow-md sm:rounded-lg">
+        <table id="table" class="min-w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">Clave del producto</th>
+                    <th scope="col" class="px-6 py-3">Nombre</th>
+                    <th scope="col" class="px-6 py-3">Descripción</th>
+                    <th scope="col" class="px-6 py-3">Precio</th>
+                    <th scope="col" class="px-6 py-3">Cantidad</th>
+                    <th scope="col" class="px-6 py-3">Total</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Las filas se insertarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    
+    
+
+
+    
+</body>
+<script type="module" src="../src/app.js"></script>
+</html>

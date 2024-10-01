@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#recuadro-carrito {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Para que se posicione correctamente */
+    top: 100%; /* Justo debajo del botón */
+    right: 0; /* Alinear a la derecha */
+    width: 300px; /* Ancho fijo del recuadro */
+    max-height: 400px; /* Altura máxima del recuadro */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* Asegurarse de que esté encima */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+#recuadro-carrito.show {
+    display: block; /* Mostrar recuadro */
+}
+
+
+
